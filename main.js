@@ -9,7 +9,7 @@ function time() {
     if (hours === 12) {
         hours = 12;
     } else {
-        hours = hours % 12;
+        hours %= 12;
     }
 
     if (minutes < 10) {

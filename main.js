@@ -5,7 +5,12 @@ function time() {
     let seconds = date.getSeconds();
 
     let format = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12;
+    
+    if (hours === 12) {
+        hours = 12;
+    } else {
+        hours = hours % 12;
+    }
 
     if (minutes < 10) {
         minutes = '0' + minutes;
